@@ -1,0 +1,49 @@
+<div class="p-grid">
+  <!-- <p-button type="button" (click)="visibleSidebar2 = true" icon="pi pi-arrow-left"></p-button> -->
+  <div class="sticky_header_menu padding-0">
+    <p-megaMenu [model]="items"></p-megaMenu>
+  </div>
+
+  <!-- SIDEBAR MENU -->
+  <p-sidebar [(visible)]="visibleSidebar2" position="right" [baseZIndex]="10000">
+    <p-button type="button" (click)="visibleSidebar2 = false" label="Save" styleClass="p-button-success"></p-button>
+    <p-button type="button" (click)="visibleSidebar2 = false" label="Cancel"
+              styleClass="p-button-secondary"></p-button>
+  </p-sidebar>
+
+  <!-- CONTENT-->
+  <div class="p-col-12 padding-bot-0 light-background">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="p-col-12 padding-0 transition top-padding-25 transition_l_d">
+  </div>
+
+  <!-- FOOTER -->
+  <div class="p-col-12 footer text-align-center">
+    <div class="p-grid">
+      <div class="p-col-4">
+        <img class="text-align-center cmmrapi-logo" src="../assets/img/icons/logoSK.png">
+        <p class="text-align-center margin-0 light-text ">Centrum moderných metód riadenia a priemyselnej
+          informatiky</p>
+      </div>
+      <div class="p-col-3">
+        <p><i class="pi pi-map-marker"></i>Letná 9/A, 042 00 Košice</p>
+        <p><i class="pi pi-mobile"></i>tel.: 055/602 2210, 602 2201</p>
+        <p><i class="pi pi-envelope"></i> e-mail: uchadzaci.fei@tuke.sk</p>
+      </div>
+      <div class="p-col-2">
+        <ul>
+          <li>
+            lalala
+          </li>
+        </ul>
+      </div>
+      <div class="p-col-3 links text-align-center center-verticaly-horisonticaly">
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+</div>

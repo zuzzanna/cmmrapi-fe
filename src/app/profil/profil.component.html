@@ -1,0 +1,163 @@
+<div class="p-grid">
+  <div class="p-col-12 padding-0">
+    <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [autoPlay]="true" [circular]="true"
+                [showThumbnails]="false" [showIndicators]="true" [showIndicatorsOnItem]="true"
+                [transitionInterval]="6000"
+                [containerStyle]="{'max-height': '100%'}">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.source" style="height:50rem; width: 100%; display: block;"/>
+      </ng-template>
+      <ng-template pTemplate="caption">
+        <img class="header_icon text-align-center" src="../../assets/img/icons/logoSK.png">
+        <h1 class="text-align-center margin-0 light-text">Centrum moderných metód riadenia a priemyselnej
+          informatiky</h1>
+        <hr>
+      </ng-template>
+    </p-galleria>
+  </div>
+
+
+  <div class="p-col-12 p-col-padding text-align-center stats top-padding-25">
+    <h1 class="text-align-center light-blue-text">Profil Centra moderných metód riadenia a priemyselnej informatiky</h1>
+    <hr>
+    <div class="p-grid p-jc-center top-padding-25">
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <h2>10</h2>
+          <p>Predmety</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <h2>6</h2>
+          <p>Laboratoria</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <h2>30</h2>
+          <p>Modely</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/graduated.svg" alt="">
+          </ng-template>
+          <h2>15</h2>
+          <p>Dizertačné práce</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/graduated.svg" alt="">
+          </ng-template>
+          <h2>96</h2>
+          <p>Diplomantske práce</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/graduated.svg" alt="">
+          </ng-template>
+          <h2>126</h2>
+          <p>Bakalárske práce</p>
+        </p-card>
+      </div>
+      <div class="p-col-3">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum ipsum metus, eu varius leo
+            tincidunt non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas.</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <p>Spolupraca s cernom</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <h2>1</h2>
+          <p>Profesor</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/group.svg" alt="">
+          </ng-template>
+          <h2>2</h2>
+          <p>Docenti</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/user.svg" alt="">
+          </ng-template>
+          <h2>1</h2>
+          <p> Odborná asistentka</p>
+        </p-card>
+      </div>
+      <div class="p-col-2">
+        <p-card>
+          <ng-template pTemplate="header">
+            <img src="../../assets/img/icons/group.svg" alt="">
+          </ng-template>
+          <h2>5</h2>
+          <p>Doktorandi</p>
+        </p-card>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="admin" class="p-col-12 stats">
+    <h2 class="light-blue-text">Úprava Profilu</h2>
+
+  </div>
+
+  <div class="p-col-12 padding-0 transition-V top-padding-25">
+  </div>
+  <div *ngIf="admin" class="p-col-12">
+    <h2>Úprava Noviniek</h2>
+
+  </div>
+
+  <div class="p-col-12 p-col-padding news ">
+    <h1>Novinky</h1>
+    <p-dataView #dv [value]="images" [paginator]="true" [rows]="9" filterBy="name" layout="grid">
+      <ng-template let-image pTemplate="listItem">
+        <div class="p-col-12">
+          <i class="pi pi-calendar"></i> {{image.date}}
+          <div class="product-list-item">
+            <img [src]="image.source"/>
+            <div class="product-list-detail">
+              <div class="product-description">{{image.title}}</div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataView>
+  </div>
+
+</div>

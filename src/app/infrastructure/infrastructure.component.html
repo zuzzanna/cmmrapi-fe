@@ -1,0 +1,129 @@
+<div class="p-grid">
+  <div class="p-col-12 title text-align-center">
+    <h1>Infrastruktura</h1>
+    <hr>
+  </div>
+
+  <div class="p-col-12 padding-0 transition-V top-padding-25">
+  </div>
+
+  <div class="p-col-12">
+    <p-tabView >
+      <p-tabPanel  header="Popis">
+        <p>Riadiaca pyramída znázornená na obrázku predstavuje infraštruktúru Distribuovaného systému riadenia (DSR)
+          KKUI FEI TU v Košiciach ako modelu komplexného informačného a riadiaceho systému, ktorý je vybudovaný nad
+          súborom reálnych fyzikálnych modelov, umožňujúcich modelovanie a experimentálne overenie širokej škály
+          praktických úloh v podmienkach približujúcich sa podmienkam praxe v súlade s medzinárodnými štandardami a
+          odporučeniami. Uvedená infraštruktúra bola budovaná postupne pracovníkmi katedry v rámci riešenia výskumných
+          úloh katedry s podporou významných svetových firiem (Rockwell Automation, ORACLE, WONDERWARE a ďalších) ako aj
+          národných a medzinárodných projektov, napr. projektu podpory operačného programu Výskum a vývoj financovaného
+          z Európskeho fondu regionálneho rozvoja. Je súčasťou Centra informačných a komunikačných technológií pre
+          znalostné systémy riešeného na FEI TU v Košiciach.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Modelové pracovisko">
+        <p>Modelové pracovisko je postavené na báze fyzických modelov výrobných liniek, laboratórnych výukových modelov
+          dynamických systémov do štruktúry DSR KKUI, ktoré boli vytvorené v rámci laboratórií katedry. V súčasnosti je
+          existujúca množina modelov fyzikálnych systémov rozširovaná o nové modely (zložitejšie modely priemyselných
+          výrobných liniek, model rotačného inverzného kyvadla, modely mobilných robotov Khepera III), ktorých získanie
+          je realizované z prostriedkov prebiehajúceho projektu „Centra informačných a komunikačných technológií pre
+          znalostné systémy“- jeho prvej výzvy (Centra excelentnosti I). Súbor týchto reálnych modelov fyzikálnych
+          systémov predstavuje riadený technológický proces a predstavuje nultú úroveň pyramídy.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Systém riadenia">
+        <p>Systém riadenia je integrovaný do 5-úrovňovej pyramídovej architektúry DSR, ktorá umožňuje riešenie úloh v
+          oblasti komplexného riadenia s dôrazom na väzby medzi jednotlivými úrovňami. Štruktúra distribuovaného systému
+          na KKUI je znázornená na obrázku.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Prvá úroveň">
+        <h2>Technologická úroveň riadenia a regulácie</h2>
+        <p>Prvá úroveň predstavuje súbor prostriedkov riadenia a regulácie na báze PLC a technologických PC. Prostriedky
+          tejto úrovne zabezpečujú riadenie a reguláciu modelov, pričom snímače a akčné členy modelov sú pripojené buď
+          štandardne cez technologické rozhrania (analógový V/V, digitálny V/V, alebo frekvenčný V/V), alebo s využitím
+          technologických sietí (Asi, DeviceNet, alebo Profibus).</p>
+      </p-tabPanel>
+      <p-tabPanel header="Druhá úroveň">
+        <h2>Úroveň SCADA/HMI</h2>
+        <p>Druhá úroveň zahŕňa SCADA HMI a súbor modelov, ktoré boli vytvorené pre podporu riadenia na prvej úrovni.
+          SCADA HMI, zabezpečuje supervízne riadenie, zber a archiváciu údajov z výrobného procesu. Väzba na prvú úroveň
+          riadenia je realizovaná obyčajne rozhraním ETHERNET TCP/IP, prípadne iným technologickou sieťou (Profibus,
+          ControNet a pod.) Väzba na PLC je riešená s využitím OPC servera. Väzba na vyššie informačné úrovne riadenia
+          je realizovaná rozhraním ETHERNET TCP/IP s využitím ODBC komunikácie.</p>
+        <p><b>Úroveň simulačných modelov</b></p>
+        <p>
+          Úroveň modelov je realizovaná buď v programovom prostredí simulačného jazyka Matlab/Simulink so súborom
+          aplikačných Toolboxov a podporných komunikačných prostriedkov zabezpečujúcich interface s prostriedkami SCADA,
+          PLC a RDBS, alebo modely sú vytvárané priamo v prostredí Visual C++, kde sú využívané knižnice pre samotnú
+          funkcionalitu modelov ako aj komunikáciu s inými subsystémami.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Tretia úroveň">
+        <h2>Informačná úroveň riadenia na báze relačných databázových systémov, klient-server architektúra</h2>
+        <p>Tretia úroveň predstavuje úroveň MES (Manufacturing Enterprise Systems). Je určená pre riešenie a realizáciu
+          úloh zabezpečenia výroby, ktoré zahŕňajú funkcie riadenia a evidenciu výroby, riadenie skladov, operatívne
+          plánovanie, resp. rozvrhovanie výroby, riadenie kvality a riadenie opráv. Je realizovaná na báze relačných
+          databázových systémov s pripojenými klientskymi stanicami, ktoré sú realizované na báze WEB technológií.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Štvrtá úroveň">
+        <h2>Informačná úroveň riadenia na báze relačných databázových systémov, klient-server architektúra</h2>
+        <p>Štvrtá úroveň zabezpečuje funkcie ERP/MRP (Enterprise Resource Planning/ Manufacturing Resource Planning).
+          Keďže je realizovaná podobnou technológiou ako tretia úroveň, v rámci blokovej schémy infraštruktúry, obe
+          tieto úrovne sú označené ako Informačná úroveň riadenia na báze relačných databázových systémov. Štandardne je
+          využívaný relačný databázový systém (RDBS) ORACLE.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Piata úroveň">
+        <h2>Manažérska úroveň riadenia</h2>
+        <p>Najvyššia úroveň v rámci hierarchickej štruktúry je Manažérska úroveň riadenia realizovaná na báze
+          multidimenzionálnych databáz s využitím OLAP (Online Analytical Processing) technológie. Paralelne s hlavnou
+          pyramídou riadenia sú v štruktúre DSR systémy sledovania kvality na báze kamerových systémov, ktoré poskytujú
+          podpornú činnosť na nižších úrovniach riadenia.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Reálne modely fyzikálnych systémov">
+        <p>Z hľadiska funkčnosti a využitia môžeme rozdeliť do niekoľkých skupín.</p>
+        <p>Prvú skupinu tvoria priemyselné výrobné linky (FMP, PVS), ktoré zahŕňajú pneumatické a elektrické pohony,
+          trojosé manipulátory, roboty, inteligentné snímače a akčné členy, kamerové systémy pre automatické sledovanie
+          kvality produkcie, riadiace systémy na báze PLC, SCADA systémy a servre s inštalovanými databázovými
+          systémami. Sú usporiadané tak, aby umožňovali vytvárať modelové situácie vo výrobe s overením riadenia na
+          jednotlivých úrovniach hlavne medziúrovňové komunikácie pre prácu v reálnom čase.</p>
+        <p>Druhú skupinu tvoria Laboratórne výukové modely (LVM) dynamických systémov (LVM: Gulička na ploche CE151,
+          Helikoptéra CE150 a Magnetická levitácia CE152 od firmy Humusoft, laboratórny model Hydraulického systému,
+          model rotačného inverzného kyvadla – FPM-210/211, Mechanický modelový systém dvojrozmerného pohybu častíc,
+          Guľôčka na ploche B&P_KYB, mobilné roboty Robotický futbalista Mirosot a Pásový mobilný robot a iné, ktoré
+          umožňujú riešiť úlohy:</p>
+        <ul>
+          <li>
+            modelovania LVM pomocou metód analytickej a experimentálnej identifikácie s cieľom analyzovať dynamiku
+            uvedených modelov nelineárnych mnohoparametrových systémov pomocou ich naprogramovaných simulačných modelov
+            v programovom prostredí Matlab/Simulink,
+          </li>
+          <li>algoritmického vývoja programových modulov v simulačnom jazyku Matlab/Simulink na základe klasických a
+            moderných metód teórie riadenia s cieľovým využitím na riešenie definovaných úloh riadenia
+            simulačných/reálnych laboratórnych modelov v zvolených riadiacich štruktúrach,
+          </li>
+          <li>programového návrhu internetových aplikácií pre prezentáciu výsledkov definovaných úloh modelovania a
+            riadenia simulačných/reálnych laboratórnych modelov a ich implementáciu do virtuálneho laboratória
+            CyberEduCentre,
+          </li>
+        </ul>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  <div class="p-col-12">
+    <div class="p-grid p-jc-center">
+      <div class="p-col-11">
+        <div class="box">
+          <!--
+       https://www.npmjs.com/package/ngx-image-zoom
+       -->
+          <lib-ngx-image-zoom
+            [thumbImage]=myThumbnail
+            [magnification]="1"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="200"
+            [lensHeight]="200"
+          ></lib-ngx-image-zoom>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

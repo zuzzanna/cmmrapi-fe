@@ -1,0 +1,46 @@
+<div class="p-grid p-jc-center">
+  <div class="p-col-12 title text-align-center">
+    <h1>About</h1>
+    <hr>
+  </div>
+
+  <div class="p-col-12 padding-0 transition-V top-padding-25">
+  </div>
+
+  <div *ngIf="admin" class="p-col-12">
+    <editor
+      apiKey="mkum1yus3krxh7avsz8ipb1xzkjgafdc3xhi2k8cjaidafl1"
+      initialValue="<p>Initial content of the editor</p>"
+      [(ngModel)]="editorInput"
+      [ngModelOptions]="{standalone: true}"
+      [init]="{
+       height: 500,
+       class:'centered',
+       formControlName:'content',
+       base_url: '/tinymce',
+       plugins: [
+         'advlist autolink lists link image charmap print preview anchor',
+         'searchreplace visualblocks code fullscreen',
+         'insertdatetime media table paste code help wordcount'
+       ],
+       toolbar:
+         'undo redo | formatselect | bold italic backcolor | ' +
+         'alignleft aligncenter alignright alignjustify | ' +
+         'bullist numlist outdent indent | removeformat | help'
+     }"
+    >
+    </editor>
+
+    <button (click)="action()">Button</button>
+  </div>
+
+
+  <div class="p-col-10">
+    <h1>CMMRAPI</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui nisi, mattis ac tortor non, sagittis
+      pretium dolor. In semper orci mauris, a viverra quam tincidunt et. Mauris neque lectus, bibendum ut nunc non,
+      rhoncus sagittis eros. Sed libero lectus, semper vel rutrum in, lacinia quis leo. Phasellus malesuada lectus
+      tempor, tristique nisl et, maximus odio.</p>
+  </div>
+
+</div>

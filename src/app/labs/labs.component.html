@@ -1,0 +1,67 @@
+<div class="p-grid">
+
+  <div class="p-col-12 title text-align-center">
+    <h1>Členovia</h1>
+    <hr>
+  </div>
+
+  <div class="p-col-12 padding-0 transition-V top-padding-25">
+  </div>
+  <div class="p-col-12 org-chart-set">
+    <p-organizationChart [value]="data1">
+      <ng-template let-node pTemplate="person">
+        <div class="node-header p-corner-top">{{node.label}}</div>
+        <div class="node-content">
+          <div>{{node.data.name}}</div>
+        </div>
+      </ng-template>
+      <ng-template let-node pTemplate="department">
+        {{node.label}}
+      </ng-template>
+    </p-organizationChart>
+  </div>
+
+  <div class="p-col-12">
+    <hr class="dark-hr">
+  </div>
+
+  <div *ngIf="admin" class="p-col-12">
+    <form>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname">
+    </form>
+  </div>
+  <div class="p-col-12">
+    <div class="p-grid text-align-center">
+      <div class="p-col-4">
+        <h2>Profesor</h2>
+        <ul>
+          <li>prof. Ing. Ján Sarnovský, CSc.</li>
+        </ul>
+      </div>
+      <div class="p-col-4">
+        <h2>Docenti</h2>
+        <ul>
+          <li>doc. Ing. Ján Jadlovský, CSc.</li>
+          <li>doc. Ing. Anna Jadlovská, PhD.</li>
+        </ul>
+      </div>
+      <div class="p-col-4">
+        <h2>Odborní asistenti</h2>
+        <ul>
+          <li>Ing. Slávka Jadlovská, PhD.</li>
+        </ul>
+      </div>
+      <div class="p-col-4">
+        <h2>Doktorandi</h2>
+        <ul>
+          <li>Ing. Karina Cimborová</li>
+          <li>Ing. Martin Durkáč</li>
+          <li>Ing. Milan Tkáčik</li>
+          <li>Ing. Lukáš Koska</li>
+          <li>Ing. Michal Varga (externe)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

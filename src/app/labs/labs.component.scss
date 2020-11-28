@@ -1,0 +1,39 @@
+@import '../../styles';
+
+:host {
+  ::ng-deep.p-organizationchart .p-organizationchart-line-down {
+    background: $dark-blue;
+  }
+  ::ng-deep.p-organizationchart .p-organizationchart-line-top,
+  ::ng-deep.p-organizationchart .p-organizationchart-line-left {
+    border-color: $dark-blue;
+  }
+
+}
+.org-chart-set{
+  overflow-y: auto;
+  scrollbar-color: $logo-dark-blue $light-blue-background;
+  scrollbar-width: thin;
+  scrollbar-base-color: #d80505                                                              ;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $logo-dark-blue;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $dark-background;
+}

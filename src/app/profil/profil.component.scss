@@ -1,0 +1,56 @@
+@import '../../styles';
+
+:host {
+  ::ng-deep.p-galleria-indicator-onitem.p-galleria-indicators-bottom .p-galleria-indicators {
+    background: none;
+  }
+  ::ng-deep.p-galleria .p-galleria-caption {
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 0.2) 0%, rgba(9, 9, 121, 0.35) 50%, rgba(2, 17, 49) 100%);
+  }
+  ::ng-deep.p-galleria .p-galleria-caption p-galleriaitemslot {
+    height: 100%;
+    display: grid;
+  }
+  ::ng-deep.p-card {
+    background: inherit;
+    /*background: linear-gradient(0deg, rgba(0,212,255,0.2) 0%, rgba(9,9,121,0.35) 50%, rgba(2,17,49) 100%);*/
+    color: $light-text!important;
+    box-shadow: none;
+  }
+  ::ng-deep.p-card .p-card-content h2, p{
+    color: $light-text2
+  }
+}
+
+.center-verticaly-horisonticaly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-align-center {
+  display: table;
+  margin: 0 auto;
+}
+
+img.header_icon {
+  width: 15rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats{
+  background: $dark-background;
+}
+
+.stats img {
+  margin-top: 15px;
+  width: 6rem;
+  float: top;
+}
+
+.news {
+  background: $light-blue-background;
+}

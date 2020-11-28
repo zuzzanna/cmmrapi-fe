@@ -1,0 +1,130 @@
+<div class="p-grid p-jc-center">
+
+
+  <div class="p-col-12 title text-align-center">
+    <h1>Kolaborácia experimentu ALICE CERN</h1>
+    <hr>
+  </div>
+
+  <div class="p-col-12 padding-0 transition-V top-padding-25">
+  </div>
+
+  <div class="p-col-10">
+    <div class="p-grid">
+
+      <div *ngIf="admin" class="p-col-12">
+        <editor
+          apiKey="mkum1yus3krxh7avsz8ipb1xzkjgafdc3xhi2k8cjaidafl1"
+          initialValue="<p>Initial content of the editor</p>"
+          [(ngModel)]="editorInput"
+          [ngModelOptions]="{standalone: true}"
+          [init]="{
+       height: 500,
+       class:'centered',
+       formControlName:'content',
+       base_url: '/tinymce',
+       plugins: [
+         'advlist autolink lists link image charmap print preview anchor',
+         'searchreplace visualblocks code fullscreen',
+         'insertdatetime media table paste code help wordcount'
+       ],
+       toolbar:
+         'undo redo | formatselect | bold italic backcolor | ' +
+         'alignleft aligncenter alignright alignjustify | ' +
+         'bullist numlist outdent indent | removeformat | help'
+     }"
+        >
+        </editor>
+
+        <button (click)="action()">Button</button>
+      </div>
+
+      <div class="p-col-8">
+        <h1 class="text-align-center">Projekt výskumu a vývoja ALICE CERN na FEI TU v Košiciach</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui nisi, mattis ac tortor non, sagittis
+          pretium dolor. In semper orci mauris, a viverra quam tincidunt et. Mauris neque lectus, bibendum ut nunc non,
+          rhoncus sagittis eros. Sed libero lectus, semper vel rutrum in, lacinia quis leo. Phasellus malesuada lectus
+          tempor, tristique nisl et, maximus odio.</p>
+      </div>
+      <div class="p-col-4">
+        <img class="cern-visit-img" src="../../assets/img/cern-alice.JPG" alt="">
+      </div>
+
+      <div class="p-col-12">
+        <hr class="dark-hr">
+      </div>
+
+      <div class="p-col-4">
+        <p-card styleClass="p-card-shadow">
+          <h1>TUKE</h1>
+          <h3>Technická univerzita v Košiciach</h3>
+        </p-card>
+      </div>
+      <div class="p-col-4">
+        <p-card styleClass="p-card-shadow">
+          <h1>FEI</h1>
+          <h3>Fakulta elektrotechniky a informatiky</h3>
+        </p-card>
+      </div>
+      <div class="p-col-4">
+        <p-card styleClass="p-card-shadow">
+
+          <h1>KKUI</h1>
+          <h3>Katedra kybernetiky a umelej inteligencie</h3>
+        </p-card>
+      </div>
+
+      <div class="p-col-4">
+        <p-card styleClass="p-card-shadow">
+
+          <h1>Spolupráca TUKE-ALICE</h1>
+        </p-card>
+      </div>
+
+
+      <div class="p-col-4">
+        <p-card styleClass="p-card-shadow">
+
+          <h1>CERN</h1>
+        </p-card>
+      </div>
+
+
+      <div class="p-col-2">
+        <p-card styleClass="p-card-shadow">
+
+          <h1>ALICE</h1>
+          <h3>A Large Ion Colider Experiment</h3>
+        </p-card>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="p-col-12">
+        <ul>
+          <li><a href="https://www.tuke.sk/wps/portal">TUKE</a></li>
+          <li><a href="http://www.fei.tuke.sk/sk">FEI</a></li>
+          <li><a href="https://kkui.fei.tuke.sk/">KKUI</a></li>
+          <li><a href="http://matlab.fei.tuke.sk/cern-2/html/TUKE.html">Spolupráca TUKE-ALICE</a></li>
+
+          <li><a href="https://home.cern/">CERN</a></li>
+          <li><a href="https://alice-collaboration.web.cern.ch/">ALICE</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

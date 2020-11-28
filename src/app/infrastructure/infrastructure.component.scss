@@ -1,0 +1,31 @@
+@import '../../styles';
+
+:host {
+  ::ng-deep.ngxImageZoomThumbnail {
+    width: 100%;
+  }
+  ::ng-deep.ngxImageZoomFullContainer.ngxImageZoomLensEnabled{
+    border: 2px solid $logo-dark-blue!important;
+  }
+  ::ng-deep.p-tabview .p-tabview-panels{
+    background: inherit;
+  }
+  ::ng-deep.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link,
+  ::ng-deep.p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link{
+    background: $dark-background;
+    color: $light-blue-background;
+  }
+  ::ng-deep.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+    background: $dark-blue;
+    color: $light-blue-background;
+  }
+}
+
+.title{
+  height: 8rem;
+  background: $dark-background;
+}
+
+.title h1{
+  color: $light-text;
+}

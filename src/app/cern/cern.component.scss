@@ -1,0 +1,17 @@
+@import '../../styles';
+
+:host {
+  ::ng-deep.p-card{
+    background: inherit;
+    box-shadow: none;
+  }
+  ::ng-deep.p-card .p-card-body{
+    padding: 0;
+  }
+}
+
+.cern-visit-img{
+  width: 100%;
+}
+
+
